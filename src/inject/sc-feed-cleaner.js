@@ -49,7 +49,9 @@ chrome.extension.sendMessage({}, function(response) {
 			$( "a:contains('Stream')" ).removeClass( 'active' );
 			$( "a:contains('Explore')" ).removeClass( 'active' );
 
-			
+			//Quickly scroll down, then return to initiate the loading of extra lazy loading content.
+			window.scrollBy(0, 2000);
+			window.scrollBy(0, -2000);
 
 
 			hidden_reposts = true;
