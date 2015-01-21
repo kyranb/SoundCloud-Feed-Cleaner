@@ -23,7 +23,7 @@ chrome.extension.sendMessage({}, function(response) {
 		var hidden_reposts = false;
 
 		//If hidden, return Reposts to the stream
-		var showReposts = function() {
+		function showReposts() {
 
         	$( '.soundTitle__info' ).each(function() {
 	  			$(this).closest('.soundList__item').show();
@@ -32,7 +32,7 @@ chrome.extension.sendMessage({}, function(response) {
 		};
 
 		//Prevent Reposts from being visible in the stream
-		var hideReposts = function() {
+		function hideReposts() {
 
 	       	$( '.soundTitle__info' ).each(function() {
 	  			$(this).closest('.soundList__item').hide();
