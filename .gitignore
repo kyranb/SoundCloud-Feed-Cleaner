@@ -1,0 +1,19 @@
+#ignore these files
+
+#Caches
+.DS_Store
+Thumbs.db
+
+#Bower Files (They are included after being published with gulp.js)
+/bower_components/
+/bower_components/*
+
+
+#node_modules (Used for Gulp and assets)
+/node_modules
+/node_modules/*
+npm-debug.log
+
+#SublimeText Files
+*.sublime-project
+*.sublime-workspace

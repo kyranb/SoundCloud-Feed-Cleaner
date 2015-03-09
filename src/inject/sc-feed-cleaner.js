@@ -17,7 +17,7 @@ chrome.extension.sendMessage({}, function(response) {
 			}
 
 			//Remove JS errors, (SoundCloud's javascript tries to draw on a non-existant canvas...)
-			console = {log: function(s) {alert(s);}};
+			//console = {log: function(s) {alert(s);}};
 
 			var hidden_reposts = false;
 
@@ -33,11 +33,18 @@ chrome.extension.sendMessage({}, function(response) {
 			//Prevent Reposts from being visible in the stream
 			function hideReposts() {
 
-		       	$( '.soundTitle__info' ).each(function() {
-		  			$(this).closest('.soundList__item').hide();
+				$( ".soundTitle" ).each( function( index, element ){
+				    	var trackName = $( this ).find('.soundTitle__title').text().trim().toLowerCase();
+							var artistName = $(this).find('.soundTitle__info').text().trim().toLowerCase();
+
+							if( !trackName.includes(artistName) ){
+								$(this).closest('.soundList__item').hide();
+							}
+
 				});
 
 			};
+
 
 			//Remove all sounds that a user has reposted within their stream.
 			var uploads_only = function() {
