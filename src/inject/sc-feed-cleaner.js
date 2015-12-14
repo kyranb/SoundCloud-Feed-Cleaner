@@ -17,7 +17,7 @@ chrome.extension.sendMessage({}, function(response) {
 			}
 
 			//Remove JS errors, (SoundCloud's javascript tries to draw on a non-existant canvas...)
-			//console = {log: function(s) {alert(s);}};
+			console = {log: function(s) {alert(s);}};
 
 			var hidden_reposts = false;
 
@@ -33,12 +33,21 @@ chrome.extension.sendMessage({}, function(response) {
 			//Prevent Reposts from being visible in the stream
 			function hideReposts() {
 
-				$( ".soundTitle" ).each( function( index, element ){
+				$( ".soundList__item" ).each( function( index, element ){
 				    	var trackName = $( this ).find('.soundTitle__title').text().trim().toLowerCase();
-							var artistName = $(this).find('.soundTitle__info').text().trim().toLowerCase();
-
-							if( !trackName.includes(artistName) ){
-								$(this).closest('.soundList__item').hide();
+							var userName = $(this).find('.soundContext__usernameLink').text().trim().toLowerCase();
+							
+							if($(this).has(".soundContext__repost")){
+								if( !trackName.includes(userName) ){
+									console.log('hidden: ' + userName + trackName)
+									$(this).closest('.soundList__item').hide();
+								}
+								else{
+									console.log('kept: ' + userName + trackName)
+								}
+							}
+							else{
+								console.log('kept: ' + userName + trackName)
 							}
 
 				});
@@ -68,7 +77,7 @@ chrome.extension.sendMessage({}, function(response) {
 			//Return the Stream to how it appears normally
 			var reset_stream = function() {
 
-	        	$( "a:contains('Stream')" ).addClass( 'active' );
+	      $( "a:contains('Stream')" ).addClass( 'active' );
 
 				$( "a:contains('Explore')" ).removeClass( 'active' );
 				$( "a:contains('Uploads Only')" ).removeClass( 'active' );
@@ -103,12 +112,12 @@ chrome.extension.sendMessage({}, function(response) {
 			//Add a custom id tag to the deafult Stream li nav item so that we have something to bind the listener to.
 			$( "a:contains('Stream')" ).attr("id","stream-only");
 
-	  		//Allows us to remove soundcloud reposts when clicking the 'Uploads Only' li nav item.
-	  		$(document).ready(function() {
-	  			$("#uploads-only").click( uploads_only );
+	  	//Allows us to remove soundcloud reposts when clicking the 'Uploads Only' li nav item.
+	  	$(document).ready(function() {
+	  		$("#uploads-only").click( uploads_only );
 			});
 
-	  		//Allows us to include soundcloud reposts when clicking the 'Stream' li nav item.
+	  	//Allows us to include soundcloud reposts when clicking the 'Stream' li nav item.
 			$(document).ready(function() {
 	  			$("#stream-only").click( reset_stream );
 			});
