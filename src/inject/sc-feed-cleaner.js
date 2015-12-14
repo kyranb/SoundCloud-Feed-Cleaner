@@ -17,7 +17,7 @@ chrome.extension.sendMessage({}, function(response) {
 			}
 
 			//Remove JS errors, (SoundCloud's javascript tries to draw on a non-existant canvas...)
-			console = {log: function(s) {alert(s);}};
+			//console = {log: function(s) {alert(s);}};
 
 			var hidden_reposts = false;
 
