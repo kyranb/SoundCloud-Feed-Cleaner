@@ -19,6 +19,7 @@ Do you ever dream of just listenting to the artists that you really care about?
 
 #How do you use it?
 * Open up the latest version of Google Chrome
+* Download [SoundCloud-Feed-Cleaner.crx](https://github.com/kyranb/SoundCloud-Feed-Cleaner/blob/master/SoundCloud-Feed-Cleaner.crx)
 * Navigate to [chrome://extensions/](chrome://extensions/)
 * Drag and Drop SoundCloud-Feed-Cleaner.crx onto the page.
 * Allow SoundCloud Feed Cleaner to accesss soundcloud.com
