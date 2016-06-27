@@ -1,30 +1,17 @@
 ## SoundCloud Feed Cleaner
-What is it and what does it do? 
+#### What is it and what does it do?
+It's an extenstion for Google Chrome that adds an extra 'Uploads Only' tab to your SoundCloud stream page. SoundCloud Feed Cleaner creates an additional tab in your soundcloud feed called 'Uploads Only'. This tab filters your stream by hiding all reposts (unless the repost was of a remix or promotion on another channel) and just displays each artist's own creations.
 
-It's an Extension for Google Chrome and it removes reposts from soundcloud.com/stream
+![screenshot 2016-06-27 22 59
+03](https://cloud.githubusercontent.com/assets/7920702/16380521/e5528f90-3cba-11e6-9070-a4904d9aec67.png)
 
-What are reposts? 
-
-Reposts are the 'shares'/clutter that often get in the way of enjoying your music.
-
-SoundCloud Feed Cleaner creates an additional tab in your soundcloud feed called 'Uploads Only'.
-This tab filters your stream by hiding all reposts (unless the repost was of a remix or promotion on another channel) and just displaying an artist's own creations.
-
-Why should I want this?
-
-Chances are, if you have found this, you know exactly why.
-If you still need convincing, are you sick of scrolling through hundrends of unwanted songs on Soundcloud?
-Do you ever dream of just listenting to the artists that you really care about?
-
-
-#How do you use it?
-* Open up the latest version of Google Chrome
-* Download [SoundCloud-Feed-Cleaner.crx](https://github.com/kyranb/SoundCloud-Feed-Cleaner/blob/master/SoundCloud-Feed-Cleaner.crx)
+## Installation
+***NOTE: this extension works in Chrome only***
+* Download [SoundCloud-Feed-Cleaner.crx](https://github.com/kyranb/SoundCloud-Feed-Cleaner/blob/master/SoundCloud-Feed-Cleaner.crx?raw=true)
 * Navigate to [chrome://extensions/](chrome://extensions/)
-* Drag and Drop SoundCloud-Feed-Cleaner.crx onto the page.
-* Allow SoundCloud Feed Cleaner to accesss soundcloud.com
-* That's it, visit soundcloud.com/stream and enjoy!
+  - `Settings -> More Tools -> Extensions`
+* Drag and Drop `SoundCloud-Feed-Cleaner.crx` from Finder or Explorer onto the page.
+* Allow SoundCloud Feed Cleaner to access SoundCloud.
 
-
-#Questions, Bug Reports or Feedback Requests?
+## Questions, Bug Reports or Feedback Requests?
 Open an issue and I'll see what I can do :)
