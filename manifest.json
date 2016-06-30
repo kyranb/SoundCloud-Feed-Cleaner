@@ -1,9 +1,9 @@
 {
-  "name": "Soundcloud Stream Cleaner",
-  "version": "0.0.2",
+  "name": "Soundcloud Feed Cleaner",
+  "version": "0.0.3",
   "manifest_version": 3,
-  "description": "This extention provies you the option of removing all reposts from your Soundcloud Stream.",
-  "homepage_url": "http://soundcloud.com",
+  "description": "This extention provies you the option of removing all reposts from your Soundcloud Feed.",
+  "homepage_url": "https://github.com/kyranb/SoundCloud-Feed-Cleaner",
   "icons": {
     "16": "icons/icon16.png",
     "48": "icons/icon48.png",
@@ -14,13 +14,17 @@
   "default_locale": "en",
   "content_scripts": [
     {
+      "permissions": [
+        "*://soundcloud.com/*"
+      ],
       "matches": [
         "*://soundcloud.com/*"
       ],
       "js": [
-        "src/inject/sc-feed-cleaner.js",
-        "js/jquery/jquery.js"
-      ]
+        "src/jquery.min.js",
+        "src/feed-cleaner.js"
+      ],
+      "run_at": "document_end"
     }
   ]
 }
