@@ -7,7 +7,7 @@ It's an extenstion for Google Chrome that adds an extra 'Uploads Only' tab to yo
 
 ## Installation
 ***NOTE: this extension works in Chrome only***
-* Download [SoundCloud-Feed-Cleaner.crx](https://github.com/kyranb/SoundCloud-Feed-Cleaner/blob/master/SoundCloud-Feed-Cleaner.crx?raw=true)
+* Download [SoundCloud-Feed-Cleaner.crx](https://github.com/kyranb/SoundCloud-Feed-Cleaner/releases/download/0.1/SoundCloud-Feed-Cleaner.crx)
 * Navigate to [chrome://extensions/](chrome://extensions/)
   - `Settings -> More Tools -> Extensions`
 * Drag and Drop `SoundCloud-Feed-Cleaner.crx` from Finder or Explorer onto the page.
